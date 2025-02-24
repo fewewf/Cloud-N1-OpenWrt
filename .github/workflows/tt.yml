@@ -80,6 +80,8 @@ jobs:
       run: |
         chmod +x $CONFIG_SH
         ./$CONFIG_SH
+        cd openwrt
+        make defconfig
 
     - name: Clean and Download Packages
       run: |
