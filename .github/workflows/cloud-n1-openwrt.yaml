@@ -142,7 +142,7 @@ jobs:
             ${{ env.PACKAGED_OUTPUTPATH }}
 
     - name: Create release
-      uses: ncipollo/release-action@v4
+      uses: ncipollo/release-action@v1
       with:
         name: ${{ env.DATE }} ❤️ | N1-OpenWrt 自动编译打包
         allowUpdates: true
