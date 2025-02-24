@@ -12,7 +12,7 @@ env:
   FILES: N1/files
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
-  KERNEL_VERSION: 6.6.67
+  KERNEL_VERSION: 6.6.76
 
 jobs:
   build_openwrt:
@@ -116,8 +116,12 @@ jobs:
       env:
         OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
         PACKAGE_SOC: s905d
+        KERNEL_REPO_URL: ophub/flippy-openwrt-actions
         KERNEL_VERSION_NAME: ${{ env.KERNEL_VERSION }}
         WHOAMI: test
+        KERNEL_AUTO_LATEST: true
+        
+        
 
     - name: Organize files
       id: organize
